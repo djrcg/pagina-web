@@ -11,8 +11,8 @@
     <div id="map_canvas" style="width:700px;height:500px;"></div>
  
     <script type="text/javascript">
-        var latlng = new google.maps.LatLng(41.375822, 2.177770);
-        var latlng2 = new google.maps.LatLng(41.362822, 2.167770);
+        var latlng = new google.maps.LatLng(20.375822, 2.177770);
+        var latlng2 = new google.maps.LatLng(20.362822, 2.167770);
  
         // definimos valor por defecto
         var myOptions = {
@@ -27,13 +27,13 @@
         // añadimos una marca
         var marker = new google.maps.Marker({
             position: latlng,
-            title: 'Estatua Cristobal Colon',
+            title: 'Estatua Grau',
             draggable: true
         });
         // añadimos una segunda marca
         var marker2 = new google.maps.Marker({
             position: latlng2,
-            title: 'Castillo de Montjuic',
+            title: 'Palacio de la juventud',
             draggable: true
         });
  
@@ -41,12 +41,12 @@
         marker2.setMap(map);
  
         var popup = new google.maps.InfoWindow({
-            content: 'Estatua Cristobal Colon Barcelona (Spain)',
+            content: 'Estatua Cristobal Colon Barcelona (Peru)',
             position: latlng
         });
  
         var popup2 = new google.maps.InfoWindow({
-            content: 'Castillo de Montjuic',
+            content: 'Castillo de Nicaragua',
             position: latlng2
         });
         popup.open(map);
