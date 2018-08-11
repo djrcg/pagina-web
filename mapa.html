@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>utilizar un mapa de google maps para posicionar una marca y un popup</title>
+    <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+</head>
+ 
+<body>
+<div>
+    <h1>utilizar un mapa de google maps para posicionar una marca y un popup</h1>
+    <div id="map_canvas" style="width:700px;height:500px;"></div>
+ 
+    <script type="text/javascript">
+        var latlng = new google.maps.LatLng(41.375822, 2.177770);
+        var latlng2 = new google.maps.LatLng(41.362822, 2.167770);
+ 
+        // definimos valor por defecto
+        var myOptions = {
+            zoom: 14,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+ 
+        // generamos el mapa
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+ 
+        // añadimos una marca
+        var marker = new google.maps.Marker({
+            position: latlng,
+            title: 'Estatua Cristobal Colon',
+            draggable: true
+        });
+        // añadimos una segunda marca
+        var marker2 = new google.maps.Marker({
+            position: latlng2,
+            title: 'Castillo de Montjuic',
+            draggable: true
+        });
+ 
+        marker.setMap(map);
+        marker2.setMap(map);
+ 
+        var popup = new google.maps.InfoWindow({
+            content: 'Estatua Cristobal Colon Barcelona (Spain)',
+            position: latlng
+        });
+ 
+        var popup2 = new google.maps.InfoWindow({
+            content: 'Castillo de Montjuic',
+            position: latlng2
+        });
+        popup.open(map);
+        popup2.open(map);
+    </script>
+</body>
+</html>
