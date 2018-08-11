@@ -27,13 +27,13 @@
         // añadimos una marca
         var marker = new google.maps.Marker({
             position: latlng,
-            title: 'Estatua Cristobal Colon',
+            title: 'Estatua Grau',
             draggable: true
         });
         // añadimos una segunda marca
         var marker2 = new google.maps.Marker({
             position: latlng2,
-            title: 'Castillo de Montjuic',
+            title: 'Palacio de la juventud',
             draggable: true
         });
  
@@ -41,12 +41,12 @@
         marker2.setMap(map);
  
         var popup = new google.maps.InfoWindow({
-            content: 'Estatua Cristobal Colon Barcelona (Spain)',
+            content: 'Estatua Cristobal Colon Barcelona (Peru)',
             position: latlng
         });
  
         var popup2 = new google.maps.InfoWindow({
-            content: 'Castillo de Montjuic',
+            content: 'Castillo de Nicaragua',
             position: latlng2
         });
         popup.open(map);
